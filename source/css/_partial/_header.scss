@@ -17,3 +17,16 @@
     text-align: center;
   }
 }
+
+.xxx {
+  top: 0px;
+  position: fixed;
+  z-index: 2;
+  height: 2px;
+  width: 100%;
+  background-color: #fefefe;
+}
+.xx2 {
+  width: 0%;
+  background-color: $theme-color;
+}

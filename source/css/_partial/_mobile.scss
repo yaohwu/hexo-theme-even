@@ -14,7 +14,8 @@
   text-align: center;
   transition: transform 300ms ease;
   z-index: 99;
-
+  margin-top: 2px;
+  
   &.fixed-open {
     transform: translate3d(180px, 0px, 0px);
   }

@@ -5,7 +5,7 @@
     this.config = config;
   }
 
-  Even.prototype.setup = function() {
+  Even.prototype.setup = function () {
     var leancloud = this.config.leancloud;
 
     this.navbar();
@@ -21,7 +21,7 @@
     if (leancloud.app_id && leancloud.app_key) {
       this.recordReadings();
     }
-    if(this.config.latex) {
+    if (this.config.latex) {
       this.renderLaTeX();
     }
     this.backToTop();
@@ -85,7 +85,7 @@
           'position': 'absolute',
           'top': maxScrollTop
         }
-      }
+      };
 
       $(window).scroll(function () {
         var scrollTop = $(window).scrollTop();
@@ -97,7 +97,7 @@
         } else {
           $toc.css(tocState.process);
         }
-      })
+      });
     }
   };
 
@@ -184,9 +184,9 @@
           newcounter.set('time', 1);
 
           var acl = new AV.ACL();
-          acl.setWriteAccess('*', true)
-          acl.setReadAccess('*', true)
-          newcounter.setACL(acl)
+          acl.setWriteAccess('*', true);
+          acl.setReadAccess('*', true);
+          newcounter.setACL(acl);
 
           newcounter.save().then(function () {
             updateVisits($visits, newcounter.get('time'));
@@ -216,7 +216,7 @@
           // eslint-disable-next-line
           console.log('Error:' + error.code + ' ' + error.message);
         });
-      })
+      });
     }
   };
 
@@ -229,6 +229,11 @@
       } else {
         $backToTop.fadeOut(1000);
       }
+
+      var scrollPercentage = Math.round(100 * $(window).scrollTop() / ($(window.document).height() - $(window).height()));
+      // $('#back-to-top i').text(' ' + scrollPercentage + '%');
+      $('.xxx .xx2').css('width', scrollPercentage + '%');
+
     });
 
     $backToTop.click(function () {
@@ -238,16 +243,23 @@
 
   Even.prototype.renderLaTeX = function () {
     var loopID = setInterval(function () {
-      if(window.MathJax) {
+      if (window.MathJax) {
         var jax = window.MathJax;
-        jax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\\(', '\\)']] }});
+        jax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\\(', '\\)']] } });
         jax.Hub.Queue(['Typeset', jax.Hub, $(document.body)[0]]);
         clearInterval(loopID);
       }
     }, 500);
-  }
+  };
+
+  Even.prototype.beian = function () {
+    var l = document.getElementById('beian');
+    if (l && window && window.location.hostname === 'www.mercenaryunion.com') {
+      l.innerHTML = '<a href="http://www.beian.miit.gov.cn">豫ICP备15012164号-1</a>';
+    }
+  };
 
   var config = window.config;
   var even = new Even(config);
   even.setup();
-}(window))
+}(window));

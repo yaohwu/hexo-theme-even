@@ -8,6 +8,7 @@ menu:
 footer:
   powered: "由 %s 强力驱动"
   theme: 主题
+  hosting: "由 %s 自动托管"
 
 posts:
   prev: 上一页

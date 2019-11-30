@@ -8,6 +8,7 @@ menu:
 footer:
   powered: "Powered by %s"
   theme: Theme
+  hosting: "Hosting on %s"
 
 posts:
   prev: Prev

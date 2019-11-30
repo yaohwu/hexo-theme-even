@@ -10,11 +10,15 @@
     {{ __('footer.theme') }} - 
     <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
   </span>
+  <span class="division">|</span>
+  <span class="hosting-info">
+    {{ __('footer.hosting', '<a class="netlify-link" href="https://www.netlify.com">netlify</a>') }}
+  </span>
 
   <span class="copyright-year">
     {%- set current = date(Date.now(), "YYYY") -%}
-    &copy;
-    {%- if theme.since and theme.since != current -%}
+    &copy; 
+    {%- if theme.since and theme.since != current -%} 
       {{ theme.since }} - {{ current }}
     {%- else -%}
       {{ current }}
@@ -25,4 +29,8 @@
     </span>
     <span class="author">{{ config.author }}</span>
   </span>
+
+  <span id="beian">
+  </span>
+
 </div>
