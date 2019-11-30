@@ -18,15 +18,13 @@
   }
 }
 
-.xxx {
+.scrollPercentage {
   top: 0px;
   position: fixed;
-  z-index: 2;
+  z-index: 100;
   height: 2px;
-  width: 100%;
+  // width: 100%;
   background-color: #fefefe;
-}
-.xx2 {
   width: 0%;
   background-color: $theme-color;
 }

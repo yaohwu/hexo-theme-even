@@ -6,7 +6,7 @@
   </head>
 
   <body>
-    <div class="xxx"><div class="xxx xx2"></div></div>
+    <div class="scrollPercentage"></div>
     {%- include '_partial/slideout.swig' -%}
     <div class="container" id="mobile-panel">
       <header id="header" class="header">

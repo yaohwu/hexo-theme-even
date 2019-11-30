@@ -232,7 +232,7 @@
 
       var scrollPercentage = Math.round(100 * $(window).scrollTop() / ($(window.document).height() - $(window).height()));
       // $('#back-to-top i').text(' ' + scrollPercentage + '%');
-      $('.xxx .xx2').css('width', scrollPercentage + '%');
+      $('.scrollPercentage').css('width', scrollPercentage + '%');
 
     });
 

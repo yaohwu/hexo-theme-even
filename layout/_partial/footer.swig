@@ -16,6 +16,7 @@
   </span>
 
   <span class="copyright-year">
+    <span>
     {%- set current = date(Date.now(), "YYYY") -%}
     &copy; 
     {%- if theme.since and theme.since != current -%} 
@@ -23,10 +24,12 @@
     {%- else -%}
       {{ current }}
     {%- endif -%} 
+    </span>
 
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
+
     <span class="author">{{ config.author }}</span>
   </span>
 
