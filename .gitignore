@@ -3,3 +3,4 @@
 *.log
 /.vscode
 # _config.yml
+package-lock.json
