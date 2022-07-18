@@ -85,9 +85,9 @@ leancloud:
 # baidu_verification: dAGCCFnguk
 
 # Google Analytics
-google_analytics: UA-109085701-1
+# google_analytics: UA-109085701-1
 # Google Verification
-google_verification: UbNkzWjJwlu0hdjVZnA_NkcGv6boCLQrnZ0hsjzJ7cM
+# google_verification: UbNkzWjJwlu0hdjVZnA_NkcGv6boCLQrnZ0hsjzJ7cM
 
 # Disqus
 disqus_shortname: zeed-w-beez
