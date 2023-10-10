@@ -35,6 +35,9 @@ mode: default
 
 toc: false
 
+# node_sass:
+#   outputStyle: expanded
+
 # jQuery fancybox
 fancybox: false
 
@@ -90,7 +93,7 @@ leancloud:
 # google_verification: UbNkzWjJwlu0hdjVZnA_NkcGv6boCLQrnZ0hsjzJ7cM
 
 # Disqus
-disqus_shortname: zeed-w-beez
+# disqus_shortname: zeed-w-beez
 
 #Changyan
 changyan:
@@ -119,4 +122,4 @@ gitalk:
 # ===========================================
 # Version
 # ===========================================
-version: 2.11.0
+version: 2.11.1

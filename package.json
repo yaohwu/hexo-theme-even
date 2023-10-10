@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/zeed-w-beez/hexo-theme-even#readme",
   "devDependencies": {
-    "all-contributors-cli": "^6.20.0",
     "eslint": "^8.18.0"
   }
 }

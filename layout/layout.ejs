@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="<%- config.language %>">
+
+<head>
+  <%- partial('_partial/head.ejs') %>
+  <%
+  var title = page.title;
+  if (is_archive()){
+    title = __('archive_a');
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('category') + ': ' + page.category;
+  } else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+  }
+  %>
+  <%- partial("_partial/title.ejs", {title: page.title + ' - ' + config.title}) %>
+</head>
+
+<body>
+  <div class="scrollPercentage"></div>
+  <%- partial('_partial/slideout.ejs') %>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+      <%- partial('_partial/header.ejs') %>
+    </header>
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <%- body %>
+        </div>
+        <%- partial('_partial/comments.ejs') %>
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <%- partial('_partial/footer.ejs') %>
+    </footer>
+    <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
+  </div>
+  <%- partial('_script/comments.ejs') %>
+  <%- partial('_script/libs.ejs') %>
+  <%- partial('_script/theme.ejs') %>
+</body>
+
+</html>
