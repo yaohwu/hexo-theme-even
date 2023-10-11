@@ -4,21 +4,29 @@
 <head>
   <%- partial('_partial/head.ejs') %>
   <%
-  var title = page.title;
-  if (is_archive()){
-    title = __('archive_a');
+  var title;
+  if (is_home()){
+    title = config.title;
+  } else if (page.archive){
     if (is_month()){
-      title += ': ' + page.year + '/' + page.month;
+      title = __('menu.archives') + ' - ' + page.year + '/' + page.month + ' · ' + config.title;
     } else if (is_year()){
-      title += ': ' + page.year;
+      title = __('menu.archives') + ' - ' + page.year + ' · ' + config.title;
+    } else { 
+      title = __('menu.archives') + ' · ' + config.title;
     }
   } else if (is_category()){
-    title = __('category') + ': ' + page.category;
+    title = page.category + ' · ' + config.title;
   } else if (is_tag()){
-    title = __('tag') + ': ' + page.tag;
+    title = page.tag + ' · ' + config.title;
+  } else if (is_page() && page.title){
+    title = __('menu.' + page.title.toLowerCase()) + ' · ' + config.title;
+  } else {
+    title = page.title + ' - ' + config.title;
   }
   %>
-  <%- partial("_partial/title.ejs", {title: page.title + ' - ' + config.title}) %>
+  <%- partial("_partial/title.ejs", {title: title}) %>
+
 </head>
 
 <body>

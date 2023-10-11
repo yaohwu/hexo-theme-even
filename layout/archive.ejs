@@ -1,9 +1,1 @@
-<% if (page.archive) { %>
-  <%- partial("_partial/title.ejs", {title: __('menu.archives') + ' - ' + config.title}) %>
-<% } else if (page.tag) { %>
-  <%- partial("_partial/title.ejs", {title: page.tag + ' · ' + config.title}) %>
-<% } else if (page.category) { %>
-  <%- partial("_partial/title.ejs", {title: page.category + ' · ' + config.title}) %>
-<% } %>
-
 <%- partial('_macro/archive.ejs', {page: page}) %>
