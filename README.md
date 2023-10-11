@@ -39,7 +39,28 @@ git pull
 
 ## use ejs instead of swig
 
-使用 ChatGPT 把内容从 swig 转换为 ejs 格式，效果棒棒哒。
+### 先使用 ChatGPT 把 `swig` 转换为 `ejs` 格式，效果棒棒哒
+
+### 再批量修改一下文件后缀和引用
+
+```shell
+cd layout
+
+# rename template file extension:
+find . -type f -name "*.swig" -exec sh -c 'mv "$0" "${0%.swig}.ejs"' {} \;
+
+# replate template file reference:
+find . -type f -exec sed -i 's/\.swig/\.ejs/g' {} \;
+```
+
+### 有些问题需要手动修复一下
+
+转换完肯定是不能直接运行的，还有一些地方需要手动修改下
+
+1. `{%- block content -%}{%- endblock -%}` 改为 `<%- body %>`
+1. 如果输出的是转义后的 HTML，需要把 ejs 标签 `<%=` 改为 `<%-`，具体看下面的标签说明（但是像 `page.description` 这样的字段，最好还是保留转义）
+1. 转换之后有一些 `partial("xxx.ejs")` 引用是用的变量模式，会报错说找不到，改成直接引用就好了
+1. 开发的时候 `hexo s` 会有缓存，遇到没效果的，可以先执行一下 `hexo clean`
 
 ### EJS 标签含义
 
@@ -54,26 +75,9 @@ git pull
 - `_%>` 将结束标签后面的空格符删除
 - 其他语法可以参考[官方文档](https://ejs.bootcss.com/#docs)
 
-```shell
-cd layout
-
-# rename template file extension:
-find . -type f -name "*.swig" -exec sh -c 'mv "$0" "${0%.swig}.ejs"' {} \;
-
-# replate template file reference:
-find . -type f -exec sed -i 's/\.swig/\.ejs/g' {} \;
-
-# 使用 ChatGPT 把内容从 swig 转换为 ejs 格式，效果棒棒哒。
-```
-
-### 有些问题需要手动修复一下
-
-转换完肯定是不能直接运行的，还有一些地方需要手动修改下
-
-- `{%- block content -%}{%- endblock -%}` 改为 `<%- body %>`
-- `date(post.date, 'YYYY')` 改为 `post.date.year()`
-
 ## use nunjucks instead of swig
+
+最开始打算是换成 `nunjucks` 的，但是没成功。
 
 ```shell
 cd layout
