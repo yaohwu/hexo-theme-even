@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/zeed-w-beez/hexo-theme-even#readme",
   "devDependencies": {
-    "eslint": "^8.18.0"
+    "eslint": "^8.51.0"
   }
 }
