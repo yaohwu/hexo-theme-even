@@ -18,31 +18,28 @@ rss: default
 # ===========================================
 menu:
   Home: /
-  Archives: /archives
-  Tags: /tags
-  Categories: /categories
-  Todo: /todo
-  About: /about
+  Archives: /archives/
+  Tags: /tags/
+  Categories: /categories/
+  About: /about/
 
 # ===========================================
 # Theme Settings
 # ===========================================
-# color: Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet
-color: Mint Green
+# color: default | mint green | cobalt blue | hot pink | dark violet
+color: cobalt blue
+# color: grieve grey
 
 # default page mode: default | archives
 mode: default
 
-toc: false
-
-# node_sass:
-#   outputStyle: expanded
+toc: true
 
 # jQuery fancybox
-fancybox: false
+fancybox: true
 
 # LaTeX support (via MathJax)
-latex: false
+latex: true
 
 copyright:
   enable: true
@@ -59,14 +56,14 @@ reward:
 # Social links Settings
 # ===========================================
 social:
-  email: zeed.w.zhao@gmail.com
+  email: yaohwu@163.com
   stack-overflow:
-  twitter:
+  twitter: https://twitter.com/yaohwu
   facebook:
   linkedin:
   google:
-  github: https://github.com/zeed-w-beez
-  weibo:
+  github: https://github.com/yaohwu
+  weibo: https://weibo.com/500856779
   zhihu:
   douban:
   pocket:
@@ -83,17 +80,20 @@ leancloud:
   app_key:
 
 # Baidu Analytics
-# baidu_analytics: 4df28318eb843c36d3db5661c05dafff
+baidu_analytics:
 # Baidu Verification
-# baidu_verification: dAGCCFnguk
+baidu_verification:
+
+# Baidu push
+baidu_push:
 
 # Google Analytics
-# google_analytics: UA-109085701-1
+google_analytics: G-RCSCVVH4VT
 # Google Verification
-# google_verification: UbNkzWjJwlu0hdjVZnA_NkcGv6boCLQrnZ0hsjzJ7cM
+google_verification:
 
 # Disqus
-disqus_shortname: zeed-w-beez
+disqus_shortname: yaohwu-xyz
 
 #Changyan
 changyan:
@@ -119,7 +119,17 @@ gitalk:
   # Available values: en, es-ES, fr, ru, zh-CN, zh-TW
   language:
 
+# utterances
+# Docs: https://utteranc.es/
+# Tips: Make sure you have installed [utterances app](https://github.com/apps/utterances) in your repo
+utterances:
+  enable: false
+  repo: owner/repo # Repository
+  issueTerm: title # Blog post ↔️ issue mapping: pathname | url | title | og:title
+  theme: github-light # Theme: github-light | github-dark | github-dark-orange | icy-dark | dark-blue | photon-dark
+  label: utterances # Issue label
+
 # ===========================================
 # Version
 # ===========================================
-version: 2.11.1
+version: 2.11.2

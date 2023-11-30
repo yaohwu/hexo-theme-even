@@ -2,23 +2,30 @@
   "name": "hexo-theme-even",
   "version": "2.11.1",
   "description": "A super simple theme for Hexo",
-  "main": "index.js",
   "keywords": [
     "responsive",
     "simple",
     "light"
   ],
-  "author": "zeed-w-beez",
-  "license": "MIT",
+  "homepage": "https://github.com/zeed-w-beez/hexo-theme-even#readme",
+  "bugs": {
+    "url": "https://github.com/zeed-w-beez/hexo-theme-even/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zeed-w-beez/hexo-theme-even.git"
   },
-  "bugs": {
-    "url": "https://github.com/zeed-w-beez/hexo-theme-even/issues"
+  "license": "MIT",
+  "author": "zeed-w-beez",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --cache --write ."
   },
-  "homepage": "https://github.com/zeed-w-beez/hexo-theme-even#readme",
   "devDependencies": {
-    "eslint": "^8.51.0"
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "prettier-plugin-packagejson": "^2.4.6",
+    "typescript": "^5.2.2"
   }
 }

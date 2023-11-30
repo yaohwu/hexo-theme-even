@@ -9,8 +9,7 @@
   font-family: $global-serif-font-family;
 
   .hexo-link,
-  .theme-link,
-  .netlify-link {
+  .theme-link {
     color: $theme-color;
   }
 
@@ -35,19 +34,19 @@
       }
 
       30% {
-        transform: scale(1)
+        transform: scale(1);
       }
 
       50% {
-        transform: scale(1.6)
+        transform: scale(1.6);
       }
 
       70% {
-        transform: scale(1)
+        transform: scale(1);
       }
 
       100% {
-        transform: scale(1)
+        transform: scale(1);
       }
     }
   }

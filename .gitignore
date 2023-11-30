@@ -4,6 +4,7 @@
 /.vscode
 # _config.yml
 
-package-lock.json
-yarn.lock
 .npmrc
+
+# webstorm
+.idea

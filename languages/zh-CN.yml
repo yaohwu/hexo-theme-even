@@ -3,13 +3,11 @@ menu:
   archives: 归档
   tags: 标签
   categories: 分类
-  todo: Todo
   about: 关于
 
 footer:
   powered: "由 %s 强力驱动"
   theme: 主题
-  hosting: "由 %s 自动托管"
 
 posts:
   prev: 上一页
@@ -17,7 +15,7 @@ posts:
   prev_post: 上一篇
   next_post: 下一篇
   toc: 文章目录
-  readmore: 阅读更多
+  read_more: 阅读更多
   visits: '阅读次数'
   reward: '赞赏支持'
 

@@ -46,7 +46,7 @@
     <% if (excerpt) { %>
     <%- excerpt %>
     <div class="read-more">
-      <a href="<%= url_for(post.path) %>" class="read-more-link"><%- __('posts.readmore') %></a>
+      <a href="<%= url_for(post.path) %>" class="read-more-link"><%- __('posts.read_more') %></a>
     </div>
     <% } else { %>
     <%- post.content %>
